@@ -13,7 +13,7 @@ const ItTechnologyVue = () => {
         const fetchData = async() => {
             setLoading(true);
             try {
-                const resposne = await axios.get("http://115.85.181.164:8085/itTech/vue");
+                const resposne = await axios.get("http://localhost:3000/itTech/vue");
                 setTechVue(resposne.data);
             } catch (error) {
                 setError(error);

@@ -27,7 +27,7 @@ const Notice = () => {
               setNoticedata(null);
               // loading 상태를 true
               setLoading(true);    
-              const response=await axios.get('http://115.85.181.164:8085/notice');
+              const response=await axios.get('http://localhost:3000/notice');
               setNoticedata(response.data);
           }catch(e){
               setError(e);

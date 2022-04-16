@@ -56,7 +56,7 @@ const MyPageInformationModify = () => {
         setm_passwd(e.target.value);
      };
 
-    axios.get(`http://115.85.181.164:8085/member/dupliname?m_name=${m_name}`)
+    axios.get(`http://localhost:3000/member/dupliname?m_name=${m_name}`)
     .then(response => {    
         console.log(response.data);
       setm_passwdd(response.data[0].m_passwd);    
@@ -83,7 +83,7 @@ const MyPageInformationModify = () => {
          //암호화
         const encrypted=CryptoJS.AES.encrypt(m_passwd, 'itp123').toString();
         alert('회원정보가 정상적으로 변경되었습니다')
-        axios.put(`http://115.85.181.164:8085/member/${m_name}`,null,{
+        axios.put(`http://localhost:3000/member/${m_name}`,null,{
           params:{
             'm_passwd': encrypted
           }
@@ -97,7 +97,7 @@ const MyPageInformationModify = () => {
       //회원탈퇴 버튼
       function Delete(m_name){
 
-        axios.delete(`http://115.85.181.164:8085/member/delete/${m_name}`)
+        axios.delete(`http://localhost:3000/member/delete/${m_name}`)
              .then(window.location='/', Logout()).catch(err=>console.log(err))
 
           }

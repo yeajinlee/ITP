@@ -46,7 +46,7 @@ const CommunicationWriting = () => {
      console.log(c_content);
      if(c_title===''||c_content===''){alert('제목,내용 모두 입력해주세요')}
      else{      
-      axios.post(`http://115.85.181.164:8085/addCom`,null,{
+      axios.post(`http://localhost:3000/addCom`,null,{
         params:{
           'c_name':c_name,
           'c_title':c_title,

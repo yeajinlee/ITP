@@ -18,7 +18,7 @@ const CommunityReply = () => {
   
   function Delete(num){
     if(window.confirm("댓글을 삭제하시겠습니까?")){
-      axios.delete(`http://115.85.181.164:8085/deleteRep/${num}`)
+      axios.delete(`http://localhost:3000/deleteRep/${num}`)
          .then(window.location='/communication/'+no).catch(err=>console.log(err))
     }
   }
@@ -48,7 +48,7 @@ const CommunityReply = () => {
         console.log(r_content)
         if(r_content!==''){
        
-        axios.put(`http://115.85.181.164:8085/updateRep/${num}`,null,{
+        axios.put(`http://localhost:3000/updateRep/${num}`,null,{
           params:{
          
             'r_content':r_content,
@@ -64,7 +64,7 @@ const CommunityReply = () => {
       const submit=()=>{
         
         if(r_content!==''){
-          axios.post(`http://115.85.181.164:8085/addRep/${no}`,null,{
+          axios.post(`http://localhost:3000/addRep/${no}`,null,{
           params:{
             'r_no':no,
             'r_content':r_content,
@@ -118,7 +118,7 @@ const CommunityReply = () => {
               setRepdata(null);
               // loading 상태를 true
               setLoading(true);    
-              const response=await axios.get(`http://115.85.181.164:8085/rep/${no}`);
+              const response=await axios.get(`http://localhost:3000/rep/${no}`);
               console.log(response.data);
               setRepdata(response.data);
               //setr_name(response.data[0].r_name);
@@ -142,7 +142,7 @@ useEffect(()=>{
           setComrepdata(null);
           // loading 상태를 true
           setLoading(true);    
-          const response=await axios.get(`http://115.85.181.164:8085/com/repnum/${no}`);
+          const response=await axios.get(`http://localhost:3000/com/repnum/${no}`);
           console.log(response.data);
           setComrepdata(response.data);
        

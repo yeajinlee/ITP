@@ -27,7 +27,7 @@ useEffect(()=>{
 const authcheck=(a)=>{
     console.log(a);
     seta_auth('승인');
-    axios.put(`http://115.85.181.164:8085/update/authcheck/${g_no}`,null,{
+    axios.put(`http://localhost:3000/update/authcheck/${g_no}`,null,{
         params:{
           'a_auth':'승인',
           'a_no':a,
@@ -51,7 +51,7 @@ const authcheck=(a)=>{
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/group/apply/${g_no}`);
+          const response=await axios.get(`http://localhost:3000/group/apply/${g_no}`);
           setGroupapplydata(response.data);
      
         }catch(e){

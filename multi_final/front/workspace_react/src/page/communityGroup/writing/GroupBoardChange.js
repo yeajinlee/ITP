@@ -43,7 +43,7 @@ const GroupBoardChange= () => {
      console.log(g_content)
      
     
-     axios.put(`http://115.85.181.164:8085/updateGroup/${no}`,null,{
+     axios.put(`http://localhost:3000/updateGroup/${no}`,null,{
        params:{
          'g_title':g_title,
          'g_subtitle':g_subtitle,
@@ -66,7 +66,7 @@ const GroupBoardChange= () => {
             setGroupdata(null);
             // loading 상태를 true
             setLoading(true);    
-            const response=await axios.get(`http://115.85.181.164:8085/group/${no}`);
+            const response=await axios.get(`http://localhost:3000/group/${no}`);
             console.log(response.data);
             setGroupdata(response.data);
             setg_title(response.data[0].g_title)

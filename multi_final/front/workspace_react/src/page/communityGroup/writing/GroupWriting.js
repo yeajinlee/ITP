@@ -56,7 +56,7 @@ const GroupWriting = () => {
       
       if(g_title===''||g_subtitle===''||g_content===''||g_tag===''||g_tag==='주제'){alert('제목,소제목,내용,카테고리 모두 입력해주세요')}
       else{
-        axios.post(`http://115.85.181.164:8085/addgroup`,null,{
+        axios.post(`http://localhost:3000/addgroup`,null,{
         params:{
           'g_name':g_name,
           'g_title':g_title,

@@ -30,7 +30,7 @@ const CommunityChange= () => {
      console.log(c_content)
      
     
-     axios.put(`http://115.85.181.164:8085/updateCom/${no}`,null,{
+     axios.put(`http://localhost:3000/updateCom/${no}`,null,{
        params:{
          'c_title':c_title,
          'c_content':c_content,
@@ -52,7 +52,7 @@ const CommunityChange= () => {
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/com/${no}`);
+          const response=await axios.get(`http://localhost:3000/com/${no}`);
           setComdata(response.data);
           setc_title(response.data[0].c_title)
           setc_content(response.data[0].c_content)

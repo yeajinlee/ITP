@@ -44,7 +44,7 @@ const ChangeNotice = () => {
             setNoticedata(null);
             // loading 상태를 true
             setLoading(true);    
-            const response=await axios.get(`http://115.85.181.164:8085/notice/${no}`);
+            const response=await axios.get(`http://localhost:3000/notice/${no}`);
             console.log(response.data);
             setNoticedata(response.data);
             setn_title(response.data[0].n_title);
@@ -67,7 +67,7 @@ fetchNotice();
      console.log(n_content)
      
     
-     axios.put(`http://115.85.181.164:8085/updateNotice/${no}`,null,{
+     axios.put(`http://localhost:3000/updateNotice/${no}`,null,{
        params:{
          'n_title':n_title,
          'n_content':n_content,
@@ -89,7 +89,7 @@ fetchNotice();
             setNoticedata(null);
             // loading 상태를 true
             setLoading(true);    
-            const response=await axios.get(`http://115.85.181.164:8085/notice/${no}`);
+            const response=await axios.get(`http://localhost:3000/notice/${no}`);
             console.log(response.data);
             setNoticedata(response.data);
             setn_title(response.data[0].n_title)

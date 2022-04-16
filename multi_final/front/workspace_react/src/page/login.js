@@ -27,7 +27,7 @@ function Login() {
     console.log(isemailnull,isPasswordnull);
     const submit=()=>{
  
-            axios.post(`http://115.85.181.164:8085/member/login`,null,{
+            axios.post(`http://localhost:3000/member/login`,null,{
             params:{
             'm_email':m_email
             }
@@ -104,7 +104,7 @@ function Login() {
                         <button id='btn' type="submit" onClick={()=>submit()} >로그인</button></div>
                     }
                     <div>
-                        <Link to="#passwordfind" className='loginBottom' >비밀번호 찾기 </Link>ㅣ
+                        {/* <Link to="#passwordfind" className='loginBottom' >비밀번호 찾기 </Link>ㅣ */}
                         <Link to="/Register" className='loginBottom'> 회원가입 </Link>
                     </div>
                 </form>

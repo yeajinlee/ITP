@@ -34,7 +34,7 @@ const AddNotice = () => {
      console.log(n_content)
      
      
-     axios.post(`http://115.85.181.164:8085/addNotice`,null,{
+     axios.post(`http://localhost:3000/addNotice`,null,{
        params:{
          'n_title':n_title,
          'n_content':n_content,

@@ -27,7 +27,7 @@ const GroupBoardDetail = () => {
   }
   function Delete(no){
     if(window.confirm("게시글을 삭제하시겠습니까?")){
-      axios.delete(`http://115.85.181.164:8085/deleteGroup/${no}`)
+      axios.delete(`http://localhost:3000/deleteGroup/${no}`)
       .then(window.location='/communityGroup').catch(err=>console.log(err))
     }
   }
@@ -42,7 +42,7 @@ const GroupBoardDetail = () => {
               setGroupdata(null);
               // loading 상태를 true
               setLoading(true);    
-              const response=await axios.get(`http://115.85.181.164:8085/group/${no}`);
+              const response=await axios.get(`http://localhost:3000/group/${no}`);
               console.log(response.data);
               setGroupdata(response.data);
              setg_name(response.data[0].g_name);

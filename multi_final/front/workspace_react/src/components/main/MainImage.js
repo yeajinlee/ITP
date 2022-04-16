@@ -22,7 +22,7 @@ const Mainimage = () => {
         // loading 상태를 true
         setLoading(true);
 
-        const response = await axios.get(`http://115.85.181.164:8085/group/recent`, null);
+        const response = await axios.get(`http://localhost:3000/group/recent`, null);
         setGroupdata(response.data);
       } catch (e) {
         setError(e);
@@ -40,7 +40,7 @@ const Mainimage = () => {
         // loading 상태를 true
         setLoading(true);
 
-        const response = await axios.get(`http://115.85.181.164:8085/com/recent`, null);
+        const response = await axios.get(`http://localhost:3000/com/recent`, null);
         setComdata(response.data);
       } catch (e) {
         setError(e);
@@ -54,7 +54,7 @@ const Mainimage = () => {
     const fetchTech = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://115.85.181.164:8085/itTech/main");
+        const response = await axios.get("http://localhost:3000/itTech/main");
         setTechData(response.data);
         console.log(response);
       } catch (error) {

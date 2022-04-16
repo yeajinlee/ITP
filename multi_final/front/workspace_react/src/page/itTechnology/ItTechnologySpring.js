@@ -12,7 +12,7 @@ const ItTechnologySpring = () => {
         const fetchData = async() => {
             setLoading(true);
             try {
-                const resposne = await axios.get("http://115.85.181.164:8085/itTech/spring");
+                const resposne = await axios.get("http://localhost:3000/itTech/spring");
                 setTechSpring(resposne.data);
             } catch (error) {
                 setError(error);

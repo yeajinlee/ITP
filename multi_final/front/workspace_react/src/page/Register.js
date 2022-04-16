@@ -91,7 +91,7 @@ function Register() {
     //닉네임 중복체크
    function m_namecheck(m_name){
      
-    axios.get(`http://115.85.181.164:8085/member/dupliname?m_name=${m_name}`)
+    axios.get(`http://localhost:3000/member/dupliname?m_name=${m_name}`)
     .then(response => {    
         console.log(response.data);
         if(response.data.length>0)  {setIsName(false); alert('중복입니다.'); }
@@ -106,7 +106,7 @@ function Register() {
     //이메일 중복체크
     function m_emailcheck(m_email){
       
-        axios.get(`http://115.85.181.164:8085/member/dupliemail?m_email=${m_email}`)
+        axios.get(`http://localhost:3000/member/dupliemail?m_email=${m_email}`)
         .then(response => {    
             console.log(response.data);
             if(response.data.length>0) {setIsEmail(false); alert('중복입니다.'); }
@@ -132,7 +132,7 @@ function Register() {
      else if(isName===true&&isEmail===true&&isPassword===true&&isPasswordcheck===true&&ischeckboxchecked===true&&ischeckboxchecked===true){
         const m_passwdcrypto = CryptoJS.AES.encrypt(m_passwd, 'itp123').toString();
         alert('저희 ITP 회원이 되어주셔서 감사합니다!')
-        axios.post(`http://115.85.181.164:8085/addMember`,null,{
+        axios.post(`http://localhost:3000/addMember`,null,{
             params:{
               'm_name':m_name,
               'm_email':m_email,

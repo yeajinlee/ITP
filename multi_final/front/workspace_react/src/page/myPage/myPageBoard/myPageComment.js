@@ -22,7 +22,7 @@ const MyPageCommunityComment = () => {
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/mypage/group/rep?m_name=${m_name}`,null,{
+          const response=await axios.get(`http://localhost:3000/mypage/group/rep?m_name=${m_name}`,null,{
             params:{
                 'm_name':m_name,
               }
@@ -48,7 +48,7 @@ fetchGroup();
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/mypage/rep?m_name=${m_name}`,null,{
+          const response=await axios.get(`http://localhost:3000/mypage/rep?m_name=${m_name}`,null,{
             params:{
                 'm_name':m_name,
               }
@@ -71,7 +71,7 @@ fetchCom();
         const fetchForum = async() => {
             try {
                 setLoading(true);
-                const response = await axios.get(`http://115.85.181.164:8085/mypage/forum?m_name=${m_name}`, null, {params: {'m_name': m_name}});
+                const response = await axios.get(`http://localhost:3000/mypage/forum?m_name=${m_name}`, null, {params: {'m_name': m_name}});
                 setForumData(response.data);
             } catch (error) {
                 setError(error);

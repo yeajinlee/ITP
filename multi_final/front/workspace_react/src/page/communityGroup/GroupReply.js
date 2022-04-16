@@ -19,7 +19,7 @@ const GroupReply = () => {
 
   function Delete(num){
     if(window.confirm("댓글을 삭제하시겠습니까?")){  
-      axios.delete(`http://115.85.181.164:8085/deleteGroupRep/${num}`)
+      axios.delete(`http://localhost:3000/deleteGroupRep/${num}`)
          .then(window.location='/communityGroup/'+no).catch(err=>console.log(err))
 
     }
@@ -49,7 +49,7 @@ const GroupReply = () => {
         console.log(rg_content)
         if(rg_content!==''){
        
-        axios.put(`http://115.85.181.164:8085/updateGroupRep/${num}`,null,{
+        axios.put(`http://localhost:3000/updateGroupRep/${num}`,null,{
           params:{
          
             'rg_content':rg_content,
@@ -64,7 +64,7 @@ const GroupReply = () => {
 
       const submit=()=>{
         if(rg_content!==''){ //내용입력시에만 추가가 가능하도록설정
-          axios.post(`http://115.85.181.164:8085/addGroupRep/${no}`,null,{
+          axios.post(`http://localhost:3000/addGroupRep/${no}`,null,{
           params:{
             'rg_no':no,
             'rg_content':rg_content,
@@ -95,7 +95,7 @@ const GroupReply = () => {
               setGrouprepdata(null);
               // loading 상태를 true
               setLoading(true);    
-              const response=await axios.get(`http://115.85.181.164:8085/group/repnum/${no}`);
+              const response=await axios.get(`http://localhost:3000/group/repnum/${no}`);
               console.log(response.data);
               setGrouprepdata(response.data);
            
@@ -144,7 +144,7 @@ console.log(isLogin);
               setRepdata(null);
               // loading 상태를 true
               setLoading(true);    
-              const response=await axios.get(`http://115.85.181.164:8085/group/rep/${no}`);
+              const response=await axios.get(`http://localhost:3000/group/rep/${no}`);
               console.log(response.data);
               setRepdata(response.data);
               //setr_name(response.data[0].r_name);

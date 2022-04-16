@@ -96,7 +96,7 @@ console.log(Groupdatas.length);
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/group/listAll`,null);
+          const response=await axios.get(`http://localhost:3000/group/listAll`,null);
           setGroupdata(response.data);
           setFilterData(response.data)
           

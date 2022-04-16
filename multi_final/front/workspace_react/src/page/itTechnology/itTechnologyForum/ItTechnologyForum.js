@@ -113,7 +113,7 @@ const ItTechnologyForum = () => {
         const fetchForumCnt = async() => {
             setLoading(true);
             try {
-                const response = await axios.get('http://115.85.181.164:8085/itTech/forum/count');
+                const response = await axios.get('http://localhost:3000/itTech/forum/count');
                 setForumCnt(response.data);
                 console.log(response);
             } catch (error) {
@@ -130,13 +130,13 @@ const ItTechnologyForum = () => {
             setLoading(true);
             try {
                 if(tag == null) {
-                    const response = await axios.get('http://115.85.181.164:8085/itTech/forum');
+                    const response = await axios.get('http://localhost:3000/itTech/forum');
                     setTechForum(response.data);
                     console.log(response);
                     console.log(response.data.length);
                 }
                 else {
-                    const response = await axios.get(`http://115.85.181.164:8085/itTech/forum/${tag}`)
+                    const response = await axios.get(`http://localhost:3000/itTech/forum/${tag}`)
                     setTechForum(response.data);
                     console.log(response);
                 }
@@ -161,7 +161,7 @@ const ItTechnologyForum = () => {
         if (document.getElementById('editInput') === null) {
             alert("내용을 입력하세요.");
         } else {
-            axios.put(`http://115.85.181.164:8085/itTech/forum/updateTech/${no}`, null,{params: {'content': content}})
+            axios.put(`http://localhost:3000/itTech/forum/updateTech/${no}`, null,{params: {'content': content}})
             .then(document.location.href='/itTech/forum')
             .catch(error => {
                 console.log(error);
@@ -172,7 +172,7 @@ const ItTechnologyForum = () => {
     const deleteComment = (no) => {
         console.log(no);
         if(window.confirm("댓글을 삭제하시겠습니까?")){
-            axios.delete(`http://115.85.181.164:8085/itTech/forum/deleteTech/${no}`)
+            axios.delete(`http://localhost:3000/itTech/forum/deleteTech/${no}`)
             .then(document.location.href='/itTech/forum')
             .catch(error => {
             console.log(error);

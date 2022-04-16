@@ -15,7 +15,7 @@ const Article2 = () => {
         const fetchData = async() => {
             setLoading(true);
             try {
-                const response = await axios.get('http://115.85.181.164:8085/article2');
+                const response = await axios.get('http://localhost:3000/article2');
                 console.log(response);
                 setArticles2(response.data);
                 console.log(articles2);

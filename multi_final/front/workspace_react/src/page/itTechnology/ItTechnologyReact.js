@@ -13,7 +13,7 @@ const ItTechnologyReact = () => {
         const fetchData = async() => {
             setLoading(true);
             try {
-                const response = await axios.get("http://115.85.181.164:8085/itTech/react"); //axios 이용, 스프링부트에 기술 업데이트 데이터 요청
+                const response = await axios.get("http://localhost:3000/itTech/react"); //axios 이용, 스프링부트에 기술 업데이트 데이터 요청
                 console.log(response);
                 setTechReact(response.data);
             } catch (error) {

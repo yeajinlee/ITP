@@ -27,7 +27,7 @@ const GroupApply = () => {
             
                 // loading 상태를 true
           
-                const response=await axios.get(`http://115.85.181.164:8085/group/${no}`);
+                const response=await axios.get(`http://localhost:3000/group/${no}`);
                 console.log(response.data);
 
                 setg_nameorigin(response.data[0].g_name);
@@ -61,7 +61,7 @@ const GroupApply = () => {
      console.log(g_content);
       
       
-      axios.post(`http://115.85.181.164:8085/addgroupapply`,null,{
+      axios.post(`http://localhost:3000/addgroupapply`,null,{
         params:{
             'a_name':g_name,
             'a_email':g_email, 

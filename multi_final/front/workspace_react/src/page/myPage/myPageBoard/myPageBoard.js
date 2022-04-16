@@ -24,7 +24,7 @@ function MyPageCommunityBoard(props) {
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/mypage/group/?m_name=${m_name}`,null,{
+          const response=await axios.get(`http://localhost:3000/mypage/group/?m_name=${m_name}`,null,{
             params:{
                 'm_name':m_name,
               }
@@ -53,7 +53,7 @@ fetchGroup();
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/mypage/com?m_name=${m_name}`,null,{
+          const response=await axios.get(`http://localhost:3000/mypage/com?m_name=${m_name}`,null,{
             params:{
                 'm_name':m_name,
               }

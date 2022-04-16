@@ -7,11 +7,12 @@ target/
 ### STS ###
 .apt_generated
 .classpath
-.factorypath
+.factorypath 
 .project
 .settings
 .springBeans
 .sts4-cache
+application-API-KEY.properties
 
 ### IntelliJ IDEA ###
 .idea

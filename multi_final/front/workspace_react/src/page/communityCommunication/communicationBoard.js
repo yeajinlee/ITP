@@ -97,7 +97,7 @@ const CommunicationBoard = () => {
           // loading 상태를 true
           setLoading(true); 
           
-          const response=await axios.get(`http://115.85.181.164:8085/com/listAll`,null);
+          const response=await axios.get(`http://localhost:3000/com/listAll`,null);
           setComdata(response.data);
           setFilterData(response.data);
           

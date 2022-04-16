@@ -19,7 +19,7 @@ const ItTrendDetail = () => {
         const fetchData = async() => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://115.85.181.164:8085/itTrend/${title}`);
+                const response = await axios.get(`http://localhost:3000/itTrend/${title}`);
                 setTrendDetail(response.data);
             } catch (error) {
                 console.log(error);

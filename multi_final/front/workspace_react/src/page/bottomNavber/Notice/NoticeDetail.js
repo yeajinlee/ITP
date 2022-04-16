@@ -24,7 +24,7 @@ const NoticeDetail = () => {
   }
   function Delete(no){
        
-    axios.delete(`http://115.85.181.164:8085/deleteNotice/${no}`)
+    axios.delete(`http://localhost:3000/deleteNotice/${no}`)
          .then(window.location='/notice').catch(err=>console.log(err))
       }
   
@@ -36,7 +36,7 @@ const NoticeDetail = () => {
               setNoticedata(null);
               // loading 상태를 true
               setLoading(true);    
-              const response=await axios.get(`http://115.85.181.164:8085/notice/${no}`);
+              const response=await axios.get(`http://localhost:3000/notice/${no}`);
               console.log(response.data);
               setNoticedata(response.data);
           }catch(e){
