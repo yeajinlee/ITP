@@ -221,7 +221,7 @@ const ItTechnologyForum = () => {
                     <Content>
                         <ReplyTag>{techForum.t_tag}</ReplyTag>
                         <ReplyContent>{techForum.t_content}</ReplyContent>
-                        <ReplyNameAndDate>{techForum.t_name} | {techForum.t_date}
+                        <ReplyNameAndDate>{techForum.t_name} | {techForum.t_date} <button>답글</button>
                         {/* 로그인한 닉네임과 작성자 닉네임 일치하면 수정, 삭제 버튼 노출 */}
                         {sessionStorage.getItem('m_name') === techForum.t_name || localStorage.getItem('m_name') === techForum.t_name 
                             || sessionStorage.getItem('m_name') === 'manager' || localStorage.getItem('m_name') === 'manager'
