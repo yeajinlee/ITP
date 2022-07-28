@@ -1,8 +1,8 @@
 import React,{useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import {  useParams, useNavigate } from 'react-router-dom';
-import Sidebar from '../sidebar';
-import './myPageInformationModify.scss';
+import Sidebar from '../Sidebar';
+import './MyPageInformationModify.scss';
 import CryptoJS from 'crypto-js';
 import axios from 'axios';
 

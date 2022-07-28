@@ -49,7 +49,7 @@ const Reply = styled.div`
   }
   
 
-  #doneBtn, #cancelBtn {
+  #doneBtn, #cancelBtn, #replyBtn {
     margin-left: 8px;
     height: 26px;
     width: 45px;
@@ -97,6 +97,8 @@ const ItTechnologyForum = () => {
     let [editNo, setEditNo] = useState('');
     const[contentCnt, setContentCnt] = useState(null);
     const[forumCnt, setForumCnt] = useState('0');
+    const[replyClicked, setReplyClicked] = useState(false);
+    const[replyNo, setReplyNo] = useState('');
 
     const handleContent = (e) => {
         setContent(e.target.value);
@@ -221,7 +223,7 @@ const ItTechnologyForum = () => {
                     <Content>
                         <ReplyTag>{techForum.t_tag}</ReplyTag>
                         <ReplyContent>{techForum.t_content}</ReplyContent>
-                        <ReplyNameAndDate>{techForum.t_name} | {techForum.t_date} <button>답글</button>
+                        <ReplyNameAndDate>{techForum.t_name} | {techForum.t_date} <button id='replyBtn'>답글</button>
                         {/* 로그인한 닉네임과 작성자 닉네임 일치하면 수정, 삭제 버튼 노출 */}
                         {sessionStorage.getItem('m_name') === techForum.t_name || localStorage.getItem('m_name') === techForum.t_name 
                             || sessionStorage.getItem('m_name') === 'manager' || localStorage.getItem('m_name') === 'manager'
@@ -237,6 +239,7 @@ const ItTechnologyForum = () => {
                         ) : (
                             null
                         )}
+                        {replyClicked && techForum.t_no === replyNo}
                         </ReplyNameAndDate>
                     </Content>
                 )
@@ -244,7 +247,7 @@ const ItTechnologyForum = () => {
 
 
             <hr />
-          </Reply>
+            </Reply>
         ))}
       </div>
     );

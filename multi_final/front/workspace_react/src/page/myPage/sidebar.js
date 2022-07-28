@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink} from "react-router-dom";
-import SidebarItem from "./pageSide";
+import SidebarItem from "./PageSide";
 
 
 function Sidebar() {

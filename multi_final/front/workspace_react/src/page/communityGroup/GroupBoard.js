@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { Card, Button} from 'react-bootstrap';
-import './groupBoard.scss'
+import './GroupBoard.scss'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import { BsChevronRight, BsSearch } from "react-icons/bs";

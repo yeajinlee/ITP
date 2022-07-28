@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { BsChevronRight, BsSearch } from "react-icons/bs";
-import '../communityCommunication/communicationBoard.scss';
+import '../communityCommunication/CommunicationBoard.scss';
 
 const CommunicationBoard = () => {
 

@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import './communityReply.scss';
+import './CommunityReply.scss';
 
 const CommunityReply = () => {
   const { no,num } = useParams();

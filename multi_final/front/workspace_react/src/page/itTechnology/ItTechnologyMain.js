@@ -1,7 +1,7 @@
 
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './itTechnologyMain.scss'
+import './ItTechnologyMain.scss'
 import ItTechnologyReact from './ItTechnologyReact';
 import ItTechnologySpring from './ItTechnologySpring';
 import ItTechnologyVue from './ItTechnologyVue';

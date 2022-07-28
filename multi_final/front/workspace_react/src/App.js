@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import './app.scss';
+import './App.scss';
 // 메인
 import MainTopNavberLogin from "./components/main/MainTopNavber";
 import Main from "./page/Main";
 import MainBottomNevber from "./components/main/MainBottomNavber.js";
 // 로그인 및 회원가입
-import Login from "./page/login";
+import Login from "./page/Login";
 import Register from "./page/Register";
 import MainOnLogin from "./page/MainOnLogin"; 
 // 공지사항 및 자주 묻는 질문
@@ -18,21 +18,21 @@ import Faq from "./page/bottomNavber/FAQ/FAQ";
 import ItTechnologyMain from './page/itTechnology/ItTechnologyAll.js'; 
 import ItTechnologyForum from "./page/itTechnology/itTechnologyForum/ItTechnologyForum";
 // IT 트렌드
-import ItTrendMain from'./page/itTrend/itTrendMain.js';
+import ItTrendMain from'./page/itTrend/ItTrendMain.js';
 import ItTrendDetail from "./page/itTrend/ItTrendDetail.js";
 // My Page
-import MyPageMain from "./page/myPage/myPageMain";
-import MyPageComment from "./page/myPage/myPageBoard/myPageComment";
-import MyPageInformationModify from "./page/myPage/myPageBoard/myPageInformationModify";
+import MyPageMain from "./page/myPage/MyPageMain";
+import MyPageComment from "./page/myPage/myPageBoard/MyPageComment";
+import MyPageInformationModify from "./page/myPage/myPageBoard/MyPageInformationModify";
 // 이용약관 및 개인정보처리방침
 import Infolaw from "./page/bottomNavber/Infolaw";
 import Useterm from "./page/bottomNavber/Useterm";
 // 모임찾기
 import GroupMain from "./page/communityGroup/GroupMain";
-import GroupWriting from "./page/communityGroup/writing/gWritingMain";
+import GroupWriting from "./page/communityGroup/writing/GroupWritingMain";
 // 소통공간
-import CommunicationMain from "./page/communityCommunication/communicationMain";
-import CommunicationWriting from "./page/communityCommunication/writing/cWritingMain"
+import CommunicationMain from "./page/communityCommunication/CommunicationMain";
+import CommunicationWriting from "./page/communityCommunication/writing/CommunicationWritingMain"
 import GroupBoardDetail from "./page/communityGroup/GroupBoardDetail";
 import GroupBoardChange from "./page/communityGroup/writing/GroupBoardChange";
 import CommunityDetail from "./page/communityCommunication/CommunityDetail"

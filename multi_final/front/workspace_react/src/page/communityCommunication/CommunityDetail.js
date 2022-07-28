@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import './communityDetail.scss'
+import './CommunityDetail.scss'
 import CommunityReply from './CommunityReply'
 import { BsChevronRight } from 'react-icons/bs';
 
@@ -21,12 +21,12 @@ const CommunityDetail = () => {
   const[c_name,setc_name]=useState('');
   
   function Update(no){
-   navigate(`/changeCom/${no}`)
+    navigate(`/changeCom/${no}`)
   }
   function Delete(no){
     if(window.confirm("게시글을 삭제하시겠습니까?")){
       axios.delete(`http://localhost:3000/deleteCom/${no}`)
-         .then(window.location='/communication').catch(err=>console.log(err))
+          .then(window.location='/communication').catch(err=>console.log(err))
     }
   }
   
@@ -64,14 +64,14 @@ if (!Comdatas) return null;
   return (
     <div id='communityDetailAll'>
       <p className='communityDetailTop'>  <BsChevronRight/> <Link to='/communication' style={{textDecoration:'none',color:'black'}}>소통공간</Link></p>
-     <div id='detailContentPost'>
+      <div id='detailContentPost'>
       {Comdatas.map((Comdata,index) => (
       <Table>
         <tbody>
           <div key={index} className='detailTitle'>
             <p className='communityTitle'>
               {Comdata.c_title}
-             <span id='communitynamedate'> 
+              <span id='communitynamedate'> 
             {Comdata.c_name} | {Comdata.c_date}</span></p>
             </div>
           <div className='detailContent'>{Comdata.c_content}</div>

@@ -1,8 +1,8 @@
 import React from 'react';
 /* import MainCarousel from '../../../components/main/MainCarousel'; */
-import CommunicationWriting from './communicationWriting';
+import CommunicationWriting from './CommunicationWriting';
 
-const writingMain = () => {
+const CommunicationWritingMain = () => {
     return (
         <div>
             <CommunicationWriting />
@@ -10,4 +10,4 @@ const writingMain = () => {
     );
 };
 
-export default writingMain;
+export default CommunicationWritingMain;

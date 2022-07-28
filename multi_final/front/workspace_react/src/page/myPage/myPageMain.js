@@ -1,6 +1,6 @@
 import React from 'react';
-import CommunityBoard from './myPageBoard/myPageBoard';
-import './myPageMain.scss'
+import CommunityBoard from './myPageBoard/MyPageBoard';
+import './MyPageMain.scss'
 const myPageMain = () => {
     return (
 

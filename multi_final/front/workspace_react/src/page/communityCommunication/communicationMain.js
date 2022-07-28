@@ -1,6 +1,6 @@
 import React from 'react';
 /* import MainCarousel from '../../components/main/MainCarousel'; */
-import CommunicationBoard from '../communityCommunication/communicationBoard';
+import CommunicationBoard from './CommunicationBoard';
 
 const communicationMain = () => {
     return (

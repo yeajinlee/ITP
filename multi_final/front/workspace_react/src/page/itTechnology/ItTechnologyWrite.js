@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form } from 'react-bootstrap';
 import axios from 'axios';
 import styled from 'styled-components';
-import './itTechnologyForum.scss';
+import './ItTechnologyForum.scss';
 
 const Write = styled.div`
 display: flex;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useParams,useNavigate } from 'react-router-dom';
-import './itTrendDetail.scss'
+import './ItTrendDetail.scss'
 import axios from 'axios';
 
 

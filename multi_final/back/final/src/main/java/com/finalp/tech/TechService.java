@@ -27,15 +27,10 @@ public class TechService {
 			
 			for(int i = 0; i <= 2; i++) {
 				reactEl = reactDoc.select("body h2").get(i);
-				System.out.println("getReactArticle reactEl => " + reactEl);
 				String title = reactEl.text();
 				String titleLink = reactEl.html().replaceAll("<a class=\"css-m6cbzp\" href=\"", "");
 				titleLink = titleLink.substring(0, titleLink.indexOf("\""));
 				String date = titleLink.substring(6, 16).replace("/", "-");
-				
-				System.out.println("getReactArticle title => " + title);
-				System.out.println("getReactArticle title => " + titleLink);
-				System.out.println("getReactArticle title => " + date);
 				
 				//리액트로 보낼 데이터
 				Map<String, String> titleMap = new HashMap<String, String>();

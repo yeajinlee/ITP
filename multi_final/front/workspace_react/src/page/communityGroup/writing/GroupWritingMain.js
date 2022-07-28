@@ -1,7 +1,7 @@
 import React from 'react';
 import GroupWriting from './GroupWriting';
 
-const writingMain = () => {
+const GroupWritingMain = () => {
     return (
         <div>
             <br />
@@ -10,4 +10,4 @@ const writingMain = () => {
     );
 };
 
-export default writingMain;
+export default GroupWritingMain;

@@ -2,8 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Article1 from './Article1.js';
 import Article2 from './Article2.js';
-import './itTrendMain.scss'
-import { OverlayTrigger, Popover, Tooltip } from 'react-bootstrap';
+import './ItTrendMain.scss'
+import { OverlayTrigger, Popover } from 'react-bootstrap';
 
 const renderPopover = (
     // <Popover id="button-tooltip" {...props}>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import GroupReply from './GroupReply';
 import axios from 'axios';
-import './groupBoardDetail.scss'
+import './GroupBoardDetail.scss'
 import {IoChevronForwardOutline } from 'react-icons/io5';
 
 const GroupBoardDetail = () => {
